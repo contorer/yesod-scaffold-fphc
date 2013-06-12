@@ -18,6 +18,7 @@ module-template: ! 'module MODULE_NAME where
 '
 modules:
   Main(tests/main.hs):
+    target-type: console
     filename: tests/main.hs
   Foundation:
     filename: Foundation.hs
@@ -25,13 +26,12 @@ modules:
     filename: Import.hs
   Handler.Home:
     filename: Handler/Home.hs
-  Main(devel.hs):
-    filename: devel.hs
   TestImport:
     filename: tests/TestImport.hs
   Application:
     filename: Application.hs
   Main(app/main.hs):
+    target-type: web
     filename: app/main.hs
   Settings.StaticFiles:
     filename: Settings/StaticFiles.hs

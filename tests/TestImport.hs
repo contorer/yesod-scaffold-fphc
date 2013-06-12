@@ -9,6 +9,7 @@ module TestImport
     , Example
     ) where
 
+import Prelude
 import Yesod.Test
 import Database.Persist hiding (get)
 import Database.Persist.Sql (SqlPersistM, runSqlPersistMPool)

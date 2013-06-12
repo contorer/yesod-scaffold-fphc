@@ -11,9 +11,10 @@ import Test.Hspec (hspec)
 import Application (makeFoundation)
 
 import HomeTest
+import System.Environment (withArgs)
 
 main :: IO ()
-main = do
+main = withArgs [] $ do
     conf <- Yesod.Default.Config.loadConfig $ (configSettings Testing)
                 { csParseExtra = parseExtra
                 }

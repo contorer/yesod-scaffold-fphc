@@ -3,6 +3,7 @@ module HomeTest
     ( homeSpecs
     ) where
 
+import Prelude
 import TestImport
 import qualified Data.List as L
 
@@ -19,7 +20,7 @@ homeSpecs =
                 setMethod "POST"
                 setUrl HomeR
                 addNonce
-                fileByLabel "Choose a file" "tests/main.hs" "text/plain" -- talk about self-reference
+                fileByLabel "Choose a file" "config/robots.txt" "text/plain"
                 byLabel "What's on the file?" "Some Content"
 
             statusIs 200
